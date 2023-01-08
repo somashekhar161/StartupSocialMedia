@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+.headerBlur {
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+main {
+  background-color: #75318c;
+  background-image: linear-gradient(
+    76deg,
+    #75318c 0%,
+    #020717 18%,
+    #171002 79%,
+    #75318c 100%
+  );
+
+  background-repeat: no-repeat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body::-webkit-scrollbar {
+  display: none;
+} /* Safari and Chrome */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (min-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+
+  #profile-1 {
+    position: absolute;
+    top: 8rem;
+    left: 28rem;
+  }
+
+  #profile-2 {
+    position: absolute;
+    top: 16rem;
+    left: 19rem;
+  }
+
+  #profile-3 {
+    position: absolute;
+    top: 33rem;
+    left: 19rem;
+  }
+
+  #profile-4 {
+    position: absolute;
+    top: 41rem;
+    left: 28rem;
+  }
+
+  #profile-5 {
+    position: absolute;
+    top: 8rem;
+    right: 28rem;
+  }
+  #profile-6 {
+    position: absolute;
+    top: 16rem;
+    right: 19rem;
+  }
+
+  #profile-7 {
+    position: absolute;
+    top: 33rem;
+    right: 19rem;
+  }
+
+  #profile-8 {
+    position: absolute;
+    top: 41rem;
+    right: 28rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+img[id^="profile"] {
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(131, 58, 180);
+  border-color: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 21%,
+    rgba(29, 143, 253, 1) 100%
+  );
 }
 
-.App-link {
-  color: #61dafb;
-}
+.likeIcon {
+  backdrop-filter: blur(50px);
+  background-color: #26262680;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  z-index: 99;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: -5rem;
+
+  position: relative;
+  top: -23rem;
+  left: 7rem;
+
+  font-size: 20px;
+  border-radius: 50px;
+
+  font-weight: bold;
+}
+.likeIcon:hover {
+  color: red;
 }

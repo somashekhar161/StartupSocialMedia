@@ -15,9 +15,26 @@ main {
   background-repeat: no-repeat;
 }
 
+body {
+  overflow: overlay;
+}
+::-webkit-scrollbar {
+  width: 0.58em;
+}
+::-webkit-scrollbar-track {
+  width: 10px;
+  background: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #262626;
+}
+
+/* 
 body::-webkit-scrollbar {
   display: none;
-} /* Safari and Chrome */
+} Safari and Chrome */
 
 @media only screen and (min-width: 1200px) {
   /*Tablets [601px -> 1200px]*/

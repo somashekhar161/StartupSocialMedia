@@ -9,7 +9,7 @@ import Community from "./components/Community";
 function App() {
   return (
     <ChakraProvider>
-      <main>
+      <main className="Main">
         <Header />
         <VStack>
           <LandingSection />

@@ -6,6 +6,7 @@ import {
   Text,
   VStack,
   HStack,
+  Stack,
 } from "@chakra-ui/react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,7 +20,7 @@ export default function EventCards() {
   return (
     <Card overflow="hidden" bg="#26262699" color={"White"} borderRadius={"lg"}>
       <CardBody>
-        <HStack>
+        <Stack direction={["column", "row"]} align={"center"}>
           <Image
             objectFit="cover"
             maxW={"15rem"}
@@ -31,8 +32,8 @@ export default function EventCards() {
           <VStack>
             <Heading size="md">Bengaluru Bootsrabbers</Heading>
 
-            <HStack spacing={"2rem"} px={"2rem"}>
-              <HStack spacing={".5rem"} px={"2rem"}>
+            <HStack spacing={"2rem"} px={[0, 0, "2rem"]}>
+              <HStack spacing={".5rem"} px={[0, 0, "2rem"]}>
                 <FontAwesomeIcon icon={faUser} />
                 <Text py="2">Shivam raj</Text>
               </HStack>
@@ -46,7 +47,7 @@ export default function EventCards() {
               </HStack>
             </HStack>
           </VStack>
-        </HStack>
+        </Stack>
       </CardBody>
     </Card>
   );

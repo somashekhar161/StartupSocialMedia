@@ -29,8 +29,7 @@ export default function CardItems() {
         transitionDuration=".3s"
         transitionTimingFunction="ease-in-out"
         _hover={{ transform: "translate(0px, -18px)" }}
-        w={"26.75rem"}
-        h={"38.125rem"}
+        w={"20.5rem"}
       >
         <CardBody padding={7}>
           <VStack spacing={"-10px"}>
@@ -38,8 +37,8 @@ export default function CardItems() {
               alt="products"
               src={`https://picsum.photos/400/800?random=${Math.random()}`}
               borderRadius="3xl"
-              w={"25.75rem"}
-              h={"25.188rem"}
+              w={"18rem"}
+              h={"17.188rem"}
               opacity="0.9"
             />
             <Box className="likeIcon">

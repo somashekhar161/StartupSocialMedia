@@ -2,7 +2,7 @@
   backdrop-filter: blur(10px);
   z-index: 100;
 }
-main {
+.Main {
   background-color: #75318c;
   background-image: linear-gradient(
     76deg,
@@ -11,10 +11,8 @@ main {
     #171002 79%,
     #75318c 100%
   );
-
   background-repeat: no-repeat;
 }
-
 body {
   overflow: overlay;
 }
@@ -41,49 +39,49 @@ body::-webkit-scrollbar {
 
   #profile-1 {
     position: absolute;
-    top: 8rem;
+    top: 4rem;
     left: 28rem;
   }
 
   #profile-2 {
     position: absolute;
     top: 16rem;
-    left: 19rem;
+    left: 12rem;
   }
 
   #profile-3 {
     position: absolute;
     top: 33rem;
-    left: 19rem;
+    left: 17rem;
   }
 
   #profile-4 {
     position: absolute;
-    top: 41rem;
+    top: 35rem;
     left: 28rem;
   }
 
   #profile-5 {
     position: absolute;
-    top: 8rem;
-    right: 28rem;
+    top: 6rem;
+    right: 24rem;
   }
   #profile-6 {
     position: absolute;
-    top: 16rem;
-    right: 19rem;
+    top: 19rem;
+    right: 9rem;
   }
 
   #profile-7 {
     position: absolute;
     top: 33rem;
-    right: 19rem;
+    right: 29rem;
   }
 
   #profile-8 {
     position: absolute;
     top: 41rem;
-    right: 28rem;
+    right: 38rem;
   }
 }
 
@@ -109,8 +107,8 @@ img[id^="profile"] {
   margin-bottom: -5rem;
 
   position: relative;
-  top: -23rem;
-  left: 7rem;
+  top: -16rem;
+  left: 6rem;
 
   font-size: 20px;
   border-radius: 50px;

@@ -1,4 +1,4 @@
-import { HStack, Box, Button, Heading } from "@chakra-ui/react";
+import { HStack, Stack, Box, Button, Heading } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 import "../App.css";
 
@@ -21,7 +21,7 @@ export default function Header() {
     function handleScroll(e) {
       if (scrollPosition < window.scrollY) {
         scrollPosition = window.scrollY;
-        boxScroll.current.style.transform = "translateY(-200px)";
+        boxScroll.current.style.transform = "translateY(-220px)";
       } else {
         scrollPosition = window.scrollY;
         boxScroll.current.style.transform = "translateY(0px)";
@@ -45,16 +45,31 @@ export default function Header() {
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
+      overflow={"hidden"}
     >
-      <Box py={4} px={20} margin="0 auto" opacity={"0.8"}>
-        <HStack justifyContent="space-between" alignItems="center">
+      <Box py={2} px={10} margin="0 auto">
+        <HStack
+          justifyContent="space-between"
+          alignItems="center"
+          flexWrap={"wrap"}
+        >
           <nav>
             {" "}
             <HStack>
               <Box py={0} my={0} px={4} border="1px" borderColor="gray.200">
-                <Heading color="White">LOGO</Heading>
+                <Heading color="White" size={"lg"}>
+                  LOGO
+                </Heading>
               </Box>
-              <HStack px={20} fontSize={"xl"} spacing={7} fontWeight="semibold">
+              <Stack
+                direction={{ base: "column", md: "row" }}
+                px={[0, 0, 20]}
+                pl={[20, 0, 20]}
+                fontSize={"lg"}
+                spacing={[1, 7, 7]}
+                fontWeight="semibold"
+                flexWrap={"wrap"}
+              >
                 <Box _hover={{ color: "White" }} color="Grey">
                   <a href="/#Home" key={"Home"} onClick={handleClick("home")}>
                     Home
@@ -87,21 +102,31 @@ export default function Header() {
                     About
                   </a>
                 </Box>
-              </HStack>
+              </Stack>
             </HStack>
           </nav>
-          <HStack px={20} spacing={"5rem"}>
+          <Stack
+            px={[0, 0, 20]}
+            spacing={[1, 0, "5rem"]}
+            direction={{ base: "column", md: "row" }}
+          >
             <Button
+              size={"md"}
               bg="#262626"
               color={"White"}
               _hover={{ bg: "White", color: "Black" }}
             >
               Sign Up
             </Button>
-            <Button bg="#262626" color={"White"} _hover={{ bg: "#0e0e0e" }}>
+            <Button
+              size={"md"}
+              bg="#262626"
+              color={"White"}
+              _hover={{ bg: "#0e0e0e" }}
+            >
               Launch
             </Button>
-          </HStack>
+          </Stack>
         </HStack>
       </Box>
     </Box>
